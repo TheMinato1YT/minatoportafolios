@@ -8,6 +8,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
 }
 
 a {
@@ -102,6 +104,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 80%; /* Ajusta el ancho */
+    margin: 20px auto; /* Centra el cuadro */
 }
 
 .service h3 {
@@ -128,6 +132,10 @@ footer {
 
 /* --- Estilo para pantallas pequeñas --- */
 @media (max-width: 768px) {
+    body {
+        justify-content: flex-start; /* Permite que el contenido suba un poco en pantallas pequeñas */
+    }
+
     .category-buttons {
         flex-direction: column;
     }
@@ -140,6 +148,7 @@ footer {
     .service {
         flex-direction: column;
         text-align: center;
+        width: 100%; /* Hace que los servicios ocupen el 100% en pantallas pequeñas */
     }
 
     .service img {

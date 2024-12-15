@@ -1,0 +1,149 @@
+/* Estilos básicos */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2e;
+    color: #e0e0ff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #80b3ff;
+}
+
+a:hover {
+    color: #4d94ff;
+}
+
+/* Encabezado */
+header {
+    background-color: #2c2c54;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+/* Sección de Categorías */
+.service-categories {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    background-color: #4d94ff;
+    color: #fff;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.category-btn:hover {
+    background-color: #80b3ff;
+    transform: scale(1.05);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    background-color: #2c2c54;
+    color: #fff;
+    padding: 10px 0;
+    margin-top: auto; /* Empuja el pie al fondo */
+}
+
+/* --- Estilo para las páginas de categoría --- */
+/* Página de detalles de servicios */
+.service {
+    background-color: #2e2e4d;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service h3 {
+    color: #80b3ff;
+    margin: 0;
+}
+
+.service p {
+    color: #e0e0ff;
+    margin: 10px 0;
+    max-width: 600px;
+}
+
+.service img {
+    max-width: 150px;
+    border-radius: 5px;
+}
+
+.service.selected {
+    background-color: #80b3ff;
+    color: #1e1e2e;
+    border: 2px solid #4d94ff;
+}
+
+/* --- Estilo para pantallas pequeñas --- */
+@media (max-width: 768px) {
+    .category-buttons {
+        flex-direction: column;
+    }
+
+    .category-btn {
+        font-size: 1.2em;
+        width: 80%; /* Hace los botones más grandes en pantallas pequeñas */
+    }
+
+    .service {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
